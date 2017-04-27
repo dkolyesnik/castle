@@ -82,6 +82,7 @@ class Database {
 		var sobj = new Sheet(this, s);
 		data.sheets.push(s);
 		sobj.sync();
+		sheets.push(sobj);
 		return sobj;
 	}
 
@@ -853,6 +854,7 @@ class Database {
 			default: t;
 			}
 		});
+		data.sheets.remove(sheet.getSheet());
 	}
 
 }

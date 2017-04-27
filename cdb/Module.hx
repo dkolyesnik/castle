@@ -347,6 +347,7 @@ class Module {
 				ids.push( {
 					name : "toString",
 					pos : pos,
+					meta: [{name: ":to", pos:pos}],
 					kind : FFun( { ret : macro:String, args : [], expr : macro return this } ),
 					access : [AInline, APublic],
 				});

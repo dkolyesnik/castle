@@ -1203,7 +1203,7 @@ class Level {
 			var th = J("<th>").text(c.name).appendTo(tr);
 			var td = J("<td>").html(main.valueHtml(c, Reflect.field(o, c.name), l.baseSheet, o)).appendTo(tr);
 			td.click(function(e) {
-				var psheet = new Sheet(null,{
+				var psheet = new Sheet(sheet.getBase(),{
 					columns : l.baseSheet.columns, // SHARE
 					props : l.baseSheet.props, // SHARE
 					name : l.baseSheet.name, // same

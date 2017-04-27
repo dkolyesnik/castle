@@ -179,7 +179,7 @@ div#menu {
 	background-color : #CCF;
 	bottom : 0px;
 	border-top : 1px solid #88F;
-	height : 25px;
+	height : 32px;
 	width : 100%;
 	user-select : none;
 	-moz-user-select : none;
@@ -203,14 +203,17 @@ div#menu a:hover {
 div#menu ul.sheets {
 	margin-top : -1px;
 	margin-left : 5px;
+	height = inherit;
+	overflow: scroll;
+	white-space:nowrap;
 }
 div#menu ul.sheets li {
 	height : 20px;
 	background-color : #88F;
 	padding : 2px 8px;
-	display : inline-block;
+	*display : inline-block;
 	zoom : 1;
-	*display : inline;
+	display : inline;
 	color : #44C;
 	cursor : pointer;
 	border : 1px solid #88F;

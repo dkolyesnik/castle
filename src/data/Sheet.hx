@@ -51,6 +51,10 @@ class Sheet {
 		return sheet.props.level != null;
 	}
 
+	public function getBase() {
+		return base;
+	}
+	
 	public inline function getSub( c : Column ) {
 		return base.getSheet(name + "@" + c.name);
 	}
@@ -125,7 +129,7 @@ class Sheet {
 		var o = {
 		};
 		for( c in sheet.columns ) {
-			var d = base.getDefault(c);
+			var d = base != null ? base.getDefault(c) : null;
 			if( d != null )
 				Reflect.setField(o, c.name, d);
 		}
@@ -510,6 +514,10 @@ class Sheet {
 				break;
 			}
 		@:privateAccess base.smap.set(name, this);
+	}
+	
+	public function getSheet() {
+		return sheet;
 	}
 
 }
